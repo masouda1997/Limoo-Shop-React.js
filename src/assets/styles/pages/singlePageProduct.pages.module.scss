@@ -1,0 +1,169 @@
+@import'../public.scss';
+
+
+.mainWrapper{
+   background-color: white;
+   border-radius: 20px;
+   display: flex;
+   padding-left: 0;
+}
+
+
+.imageWrapper{
+   width: 35%;
+   height: 550px;
+   gap: 10px;
+   // background-color: #333;
+   // display: flex;
+   div{
+      display: block;
+      display: flex;
+      justify-content: center;
+   }
+   .imageParent{
+      height:70% ;
+      padding-block: 2rem 1rem;
+      .image{
+         background-color: red;
+         width: 80%;
+         background-color: $lightCart;
+         border-radius: 20px;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         img{
+            width: 98%;
+            height: 98%;
+            border-radius: 20px;
+         }
+      }
+   }
+   .subImageParent{
+      height:30% ;
+      padding-bottom: 2rem;
+      .subImage{
+         width: 80%;
+         gap: .5rem;
+         display: flex;
+         justify-content: center;
+         // background-color: blue;
+         .subImage1 ,.subImage2 ,.subImage3{
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            flex: 1;
+            height: 80%;
+            background-color: $lightCart;
+            img{
+               width: 98%;
+               height: 98%;
+               border-radius: 20px;
+            }
+            &:hover{
+               transition: all 400ms ease;
+               transform: scale(1.05);
+               background-color: $primary;
+            }
+         }
+         
+      }
+   }
+}
+
+.verticalLine{
+   min-height: 100%;
+   width: 3px;
+   background-color: #333;
+}
+
+.contentWrapper{
+   width: 65%;
+   .title{
+      padding: 2rem;
+      h2{
+         font-weight: 700;
+         font-size: 26px;
+         line-height: 50px;
+      }
+   }
+   .horizontalLine{
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+   }
+   .descWrapper{
+      height: 85%;
+      .grid{
+         display: grid;
+         grid-template-columns: repeat(4,1fr);
+         grid-template-rows: repeat(5,1fr) ;
+         gap: 1rem;
+         margin: 1rem;
+         .descriptions{
+            background-color: $lightCart;
+            grid-column: 1/span 2;
+            grid-row: 1/span 3;
+            border-radius: 20px;
+            ul{
+               padding: 1rem;
+               line-height: 1.8rem;
+            }
+         }
+         .moreInfo{
+            grid-column: 1/span 2;
+            grid-row: 4/-1;
+            li  span:last-child{
+               color: $primary;
+               font-size: 24px;
+               line-height: 40px;
+            }
+            li  span:first-child{
+               color: $secondary;
+               font-size: 20px;
+               line-height: 40px;
+            }
+         }
+         .price{
+            font-size: 40px;
+            grid-column: 3/span 2;
+            grid-row: 1/span 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $primary;
+            small{
+               font-size: 20px;
+               color: $lightText;
+            }
+         }
+         .add{
+            border: none;
+            grid-column: 3/span 2;
+            grid-row: 3/-1;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            .a2cButton{
+               background: $secondary;
+               color: $primary;
+               font-weight: 700;
+               font-size: 32px;
+               line-height: 50px;
+               border-radius: 20px;
+               filter: drop-shadow(0px 4px 4px #00000040);
+               padding: 2rem 1rem;
+               border: none;
+               &:hover{
+                  background-color: $primary;
+                  color: $secondary;
+                  transition: all 200ms ease-out ;
+                  border: none;
+                  
+               }
+            }
+         }
+      }
+   }
+}

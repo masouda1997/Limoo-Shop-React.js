@@ -1,0 +1,369 @@
+@import '../public.scss';
+
+*{
+   direction: rtl;
+   font-family: 'vazirM';
+   // overflow-y: hidden; smiiiiiii
+}
+.fragment{
+   position: relative;
+}
+//*******************************************************
+
+.header{
+   height: 20vh;
+   // height: 200px;
+   background-color: $secondary;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   color: $primary;
+   width: 100vw;
+   h1{
+      flex-basis: 80%;
+      font-size: 45px;
+      line-height: normal;
+   }
+   .link{
+      background-color: transparent;
+      border: none;
+      
+   }
+}
+.nav{
+   display: flex !important;
+   justify-content: center;
+   gap: 1rem;
+   margin-block: .5rem;
+}
+.btn{
+   text-align: center;
+   text-decoration: none;
+   background-color: $lightbg;
+   border: 2px solid transparent;
+   color:$primary;
+   font-size: 25px;
+   font-weight: 500;
+   border-radius: 20px;
+   padding-block: .5rem;
+   margin-block: .5rem;
+   flex-basis:25vw ;
+   &:hover{
+      background-color: $secondary;
+      border: 2px solid $primary;
+   }
+}
+.linkActive{
+   text-align: center;
+   text-decoration: none;
+   background-color: $secondary;
+   border: 2px solid $primary;
+   color:$primary;
+   font-size: 25px;
+   font-weight: 500;
+   border-radius: 20px;
+   padding-block: .5rem;
+   margin-block: .5rem;
+   flex-basis:25vw ;
+}
+.line{
+   width: 100%;
+   height: 2px;
+   background-color: $secondary;
+}
+.wrap{
+   margin: 1rem auto;
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   h2{
+      line-height: normal;
+      color: $secondary;
+   }
+}
+//*******************************************************
+
+.table{
+   width: 90%;
+   margin: 0 auto;
+   text-align: center;
+   border-collapse: collapse;
+   background-color: $lightbg;
+   border-radius: 20px;
+   overflow: hidden;
+   thead{
+      color: $secondary;
+      background-color: $primary;
+      font-size: 24px;
+      line-height: 50px;
+      font-weight: 500;
+      border-bottom: 2px solid $secondary;
+   }
+   tr:nth-child(even) {
+      background-color: $lightCart;
+   }
+   td{
+      vertical-align: middle;
+      div{
+         display: flex;
+         justify-content: space-between;
+         width: 60%;
+         margin:0 auto
+      }
+   }
+   tbody td{
+      padding-block: .5rem;
+   }
+}
+.uploadedImg{
+   width:40px;
+   height:40px;
+   overflow: hidden;
+   border-radius:10px;
+   background-image:red !important;
+   margin:5px auto;
+   img{
+      width: inherit;
+      height: inherit;
+   }
+}
+.pages{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-block: 2rem;
+   width: fit-content;
+   margin: 0 auto;
+   padding: 1rem;
+   gap: 1rem;
+   button{
+      background: $secondary;
+      color: $primary;
+      border-radius: 10px;
+      width: 5rem;
+      padding: .5rem;
+      border: none;
+      &:hover{
+         background-color: $primary;
+         color: $secondary;
+      }
+   }
+   span{
+      font-size: 25px;
+      font-weight: bold;
+   }
+}
+
+//************************* Modals ******************************
+
+.modal{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #0000008c;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: $primary;
+}
+.modalContent{
+   background-color: $lightbg;
+   width: 55rem;
+   padding: 2rem;
+   border-radius: 20px;
+   button{
+      width: 100%;
+      background-color: $secondary;
+      color: $primary;
+      border-radius: 20px;
+      font-size: 25px;
+      font-weight: 500;
+      padding-block: 1rem;
+      &:hover{
+         background-color: $primary;
+         color: $secondary;
+         outline: $primary;
+         transition: ease-in-out 300ms;
+      }
+   }
+   label{
+      font-weight: 500;
+   }
+}
+.modalHeader{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.goodsImg{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 5rem;
+   // div:nth-child(1){
+   //    // flex-grow: 1;
+   // }
+   div:nth-child(2){
+      max-width: 5rem;
+   }
+}
+.r1 , .r2 , .r3{
+   display: flex;
+   width: 100%;
+   gap: 10px;
+   select option:hover{
+      background-color: $primary;
+   }
+}
+.textArea{
+   font-size:large;
+   width: 100%;
+   min-height: 7rem !important;
+   border-radius: 20px;
+   margin-block: .5rem;
+   background-color: $lightCart;
+   padding-inline: 1rem;
+   outline: none;
+   border: none;
+   &:focus{
+      background-color: $primary;
+   }
+}
+.textArea::-webkit-input-placeholder{
+   color: #2c5a27;
+   font-weight: bold;
+}
+.input{
+   font-size:large;
+   width: 100%;
+   height: 2.8rem;
+   border-radius: 20px;
+   margin-block: .5rem;
+   background-color: $lightCart;
+   padding-inline: 1rem;
+   outline: none;
+   border: none;
+   &:focus{
+      background-color: $primary;
+   }
+}
+.input::-webkit-input-placeholder{
+   color: #2c5a27;
+   font-weight: bold;
+}
+.option{
+   color:#2c5a27 ;
+   font-weight: bold;
+   background-color: #11111132;
+   text-align:center;
+}
+.inactive{display: none;}
+.active{display: flex;}
+
+.formData{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 1rem;
+   font-size:30px;
+   border-radius: 20px;
+   margin-block: .5rem;
+   background-color: whitesmoke;
+   background-color: $lightCart;
+   padding: 1rem ;
+   // outline: none;
+   border: none;
+   cursor: pointer;
+}
+// input[type=file]{
+//    display: none;
+// }
+.fileInput::-webkit-file-upload-button {
+   visibility: hidden;
+}
+.fileInput::before {
+   content: 'انتخاب تصویر ';
+   display: inline-block;
+   border: none;
+   outline: none;
+   white-space: nowrap;
+   -webkit-user-select: none;
+   cursor: pointer;
+   font-weight: 700;
+   font-size: 30px;
+}
+.fileInput:hover::before {
+   transition: all ease 200ms;
+   text-shadow: white 0 0 5px;
+}
+
+textarea,.input,.formData{
+   &:focus{
+      outline: 2px solid $secondary;
+      transition:all 50ms ease;
+   }
+}
+
+// ******************** pill ********************
+
+// .lblOrder{
+//    position: absolute;
+//    top: 10px;
+// }
+.togglePill{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   span{
+      color: $secondary;
+   }
+}
+.togglePill input[type="checkbox"] {
+   display: none;
+}
+/* capsule */
+.togglePill input[type="checkbox"]+label {
+   display: block;
+   position: relative;
+   width: 5.6em;
+   height: 2.9em;
+   border-radius: 2em;
+   background: $lightbg;
+   /* background: #131313; */
+   box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+   cursor: pointer;
+   transition: all 0.6s ease-in-out;
+}
+// .togglePill input[type="checkbox"]:checked+label {
+//    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.9);
+
+// }
+/* trigger */
+.togglePill input[type="checkbox"]+label:before {
+   content: "";
+   display: block;
+   width: 2.5em;
+   height: 2.5em;
+   border-radius: 50%;
+   /* background: #50565a; */
+   background: #989898;
+   background: $primary;
+   /* box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2); */
+   position: absolute;
+   left: 0.2em;
+   top: 0.2em;
+   /* -webkit-transition: all 0.2s ease-in-out; */
+   transition: all 0.6s ease-in-out;
+}
+
+.togglePill input[type="checkbox"]:checked+label:before {
+   /* box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2); */
+   background: #111;
+   background: #989898;
+   background-color: $primary;
+   left: 2.9em;
+   /* left: 3.9em; */
+}

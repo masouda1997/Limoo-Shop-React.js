@@ -1,0 +1,95 @@
+@import '../public.scss';
+
+*{
+   direction: rtl;
+   font-family: 'vazirM';
+   // overflow-y: hidden; smiiiiiii
+}
+.fragment{
+   position: relative;
+}
+
+.modal{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #0000008c;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: $primary;
+}
+.modalContent{
+   background-color: $lightbg;
+   width: 55rem;
+   padding: 2rem;
+   border-radius: 20px;
+   button{
+      width: 100%;
+      background-color: $secondary;
+      color: $primary;
+      border-radius: 20px;
+      font-size: 25px;
+      font-weight: 500;
+      padding-block: 1rem;
+      &:hover{
+         background-color: $primary;
+         color: $secondary;
+         outline: $primary;
+         transition: ease-in-out 300ms;
+      }
+   }
+   label{
+      font-weight: 500;
+      span{
+         color: $secondary;
+      }
+   }
+   }
+   .modalHeader{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .inactive{display: none;}
+   .active{display: flex;}
+
+   .modalTitle{
+      color: $primary;
+   }
+   .modalText{
+      color: $secondary !important;
+   }
+   .infoLine1 , .infoLine2 , .infoLine3{
+      width: 100%;
+      font-size: 20px;
+      display: flex;
+      justify-content: flex-start;
+      label{
+         flex: 1;
+      }
+   }
+
+   .orderModalTable{
+      width: 100%;
+      border-radius: 10px;
+      margin-block: 1rem !important;
+      border-radius: 20px;
+      overflow: hidden;
+      thead{
+         background-color: $primary;
+         text-align: center;
+         color: $secondary;
+         font-size: 20px;
+         font-weight: bold;
+      }
+      tbody{
+         tr:nth-child(odd){background-color: #ededed;}
+         tr:nth-child(even){background-color: #c9c9c9;}
+         color: $secondary;
+         text-align: center;
+         line-height: 2rem;
+      }
+   }

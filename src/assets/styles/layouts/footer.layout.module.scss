@@ -1,0 +1,66 @@
+@import '../public.scss';
+@import '../fonts/font.scss';
+
+.footer{
+   font-family: 'vazirM';
+   direction: rtl;
+   background-color: $secondary;
+   color: $primary;
+}
+.container{
+   width: 90%;
+   margin: 0 auto;
+   padding-block: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+}
+
+.links{
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+   ul{
+      list-style:inside ;
+      color: $primary;
+   }
+}
+.link{
+   color: $primary;
+   text-decoration: none;
+}
+
+.contacts{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: .5rem;
+   div {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+   }
+   div img{
+      width: 20px;
+      height: 20px;
+   }
+}
+
+.trust{
+   display: flex;
+   background-color: white;
+   border-radius: 20px;
+   img{
+      width: 7rem;
+      height: 7rem;
+
+   }
+}
+
+.verticalLine{
+   width: 1px;
+   height: 15vh;
+   background-color: $primary;
+   border-radius: 80%;
+}

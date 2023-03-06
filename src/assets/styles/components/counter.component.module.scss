@@ -1,0 +1,28 @@
+@import '../public.scss';
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.wrapper{
+   padding: .5rem;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   background-color: $lightCart;
+}
+
+.plus , .mines{
+   color: white;
+   text-align: center;
+   font-size: 30px;
+   border: none;
+   color: $primary;
+   background-color: transparent;
+}
+
+.lblDisplay{
+   padding:.2rem 1.5rem;
+   color: $secondary;
+   font-size: 30px;
+}

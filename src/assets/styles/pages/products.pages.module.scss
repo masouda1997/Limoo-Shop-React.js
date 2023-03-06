@@ -1,0 +1,91 @@
+@import '../public.scss';
+
+.landingBanner{
+   background-color: #f7f7f7;
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   padding: 0 5rem 1rem 5rem;
+   ._1stBanner,._2ndBanner{
+      width: 200px !important;
+      background-color: $lightCart;
+      // min-height: 10rem;
+      flex: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      img{
+         width: 700px;
+      }
+      
+   }
+}
+.wrapper{
+   width: 95%;
+   margin: 0 auto;
+   display: flex;
+   gap: 2rem;
+}
+.filters{
+   align-self: baseline;
+   flex-basis: 25%;
+}
+.filterSection{
+   align-self: flex-start;
+   margin-bottom: 1rem;   
+   background-color: $lightCart;
+   background-color: white;
+   // background-color: $secondary;
+   padding: 1rem;
+   border-radius: 20px;
+
+}
+.filterTitle{
+   text-align: center;
+   // color: $lightText;
+   // color: $lightbg;
+
+}
+
+.filterBody{
+   line-height: 3rem;
+   color: $secondary;
+   // color: $lightText;
+   // color: $lightbg;
+   font-size: 20px;
+   // input[type='radio']{
+	// 	accent-color: $primary;
+   // }
+   input[type='radio']:after {
+      width: 20px;
+      height: 20px;
+      top: 5px;
+      border-radius: 15px;
+      position: relative;
+      background-color: $lightCart;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+   }
+
+   input[type='radio']:checked:after {
+      width: 20px;
+      height: 20px;
+      top: 5px;
+      border-radius: 15px;
+      position: relative;
+      background-color: $primary;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+   }
+   div{
+      display: flex;
+      gap: 1rem;
+   }
+}
+.line{
+   height: 3px;
+   background: $primary; 
+   border-radius: 50px;
+   margin-block: .2rem;
+}

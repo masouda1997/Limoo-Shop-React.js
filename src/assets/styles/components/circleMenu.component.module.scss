@@ -1,0 +1,41 @@
+@import "../public.scss";
+
+.circleMenu{
+   display: flex;
+   justify-content: flex-start;
+   gap: 1rem;
+   overflow-x: scroll;
+   padding-inline: 5px;
+   padding-top: 5rem;
+   .circleCat{
+      display: flex;
+      flex-direction: column;
+      div:first-child{
+         background: #D9D9D9;
+         border-radius: 50%;
+         width: 150px;
+         height: 150px;
+         filter: drop-shadow(0px 4px 4px #00000040);
+         &:hover{
+            transition: all ease 300ms;
+            box-shadow: 0 0 5px 3px $primary;
+         }
+         img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 150px;
+            height: 150px;
+         }
+      }
+      div:nth-child(2){
+         text-align: center;
+         padding-block: 1rem;
+         width: 10rem;
+      }
+   }
+}
+.circleMenu::-webkit-scrollbar {
+   width: 0;  /* Remove scrollbar space */
+}

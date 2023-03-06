@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.nav{
+   display: flex;
+   justify-content: center;
+   ul{
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 20px;
+      background-color: white;
+      
+   }
+   li{
+      display: inline;
+      a{
+         color: $secondary;
+         text-decoration: none;
+         font-weight: 700;
+         font-size: x-large;
+         &:hover,&:active , &:checked{
+            color: $primary;
+         }
+      }
+
+
+   }
+}

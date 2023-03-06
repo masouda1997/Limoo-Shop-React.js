@@ -1,0 +1,68 @@
+@import '../public.scss';
+
+.products{
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 340px;
+   height: 470px;
+   box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.2);
+   &:hover{
+      img{
+         transition: all ease 200ms;
+         transform: scale(1.03);
+      }
+   }
+   
+}
+.productImage{
+   background-color: $primary;
+   max-width: 100%;
+   min-height: 70%;
+   // height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   img{
+      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 20px;
+   }
+}
+.productContent{
+   background: $lightCart;
+   font-weight: 700;
+   font-size: 1.5rem;
+   line-height: 2.6rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2.7rem;
+   padding: .5rem;
+   div:nth-of-type(1){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   small{
+      font-size: 20px;
+      color:$lightText;
+   }
+   button{
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      
+      background: white;
+      svg{fill: $primary;}
+   }
+   button:hover{
+      background: $primary;
+      svg{fill: white;}
+   }
+}
+.price span{
+   font-size: 25px;
+   color: $secondary;
+}

@@ -1,0 +1,186 @@
+@import '../public.scss';
+
+
+
+.header{
+   direction: rtl;
+   display: flex;
+   flex-direction: column;
+}
+.specialOccasion{
+   background-color: $primary;
+   height: 7.5vh;
+   background: url(https://www.technolife.ir/image/banner_TopGifDesktop_G1A9l4_59895269-fbcd-4921-bdad-ef1b21e537f2.png);
+   // height: 60px;
+}
+.container{
+   width: 90%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.mainContent{
+   // height: 15vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logoWrapper{
+   align-self: flex-start;
+   margin-top: 1rem;
+   flex: 1;
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+}
+
+.logoTxt{
+   font-family: "A Dast Nevis", 'vazirM';
+   // font-family: "vazirM";
+   font-size: 35px;
+   color: $primary;
+   text-shadow: 0 0 3px #242424;
+   animation: blinker 3s linear infinite;
+   @keyframes blinker {
+      50% {
+         opacity: 0.7;
+      }
+   }
+}
+
+.logo{
+   
+   img{
+      width: 4.1rem;
+      height: 4.3rem;
+   }
+}
+
+/////////////// search ///////////////////
+.searchWrapper{
+   position: relative;
+   flex: 2;
+   margin-top: 1rem;
+   align-self: flex-start;
+   place-content: center;
+   z-index: 1000;
+   .apiData{
+      transition: all 500ms ease;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin: 0 auto;
+      width: 90%;
+      padding-inline: 1rem;
+      border-radius:0 0  20px  20px;
+      border: 1px solid #9f9f9f;
+      border-top: 0;
+      background-color: #ededed;
+      height: 150px;
+      overflow-y: scroll;
+      div:hover{
+         background-color: $primary;
+         transition: all ease-in 250ms;
+      }
+      a{ font-size: larger;
+         color: black;
+         text-decoration: none;
+         &:hover{
+            background-color: white;
+         }
+      }
+      &::-webkit-scrollbar{
+         display: none;
+      }
+   }
+}
+.search{
+   padding: .8rem 5px ;
+   border: 2px solid #9F9F9F ;
+   border-radius: 20px;
+   display: flex;
+   justify-content: flex-start;
+   button{
+      background-color: transparent;
+      border: none;
+      svg{
+         fill:#9F9F9F ;
+      }
+      svg:hover{
+         fill: $primary;
+      }
+   }
+   input{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: larger;
+      font-family: "vazirM";
+   }
+
+}
+// ///////////////////////////////////////
+.enter{
+   margin-top: 1rem;
+   // background-color: red;
+   flex: .75;
+   display: flex;
+   justify-content: flex-end;
+   gap: 1rem;
+   align-self: flex-start;
+   .control ,.basket{
+      border: 2px solid #9F9F9F ;
+      border-radius: 20px;
+      padding: 1rem 5px ;
+      width: 3.8rem;
+      background-color: transparent;
+      color: #9F9F9F;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: black;
+   }
+   .basket{
+      position: relative;
+   }
+   .badge{
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      background-color: $primary;
+      color: $secondary;
+      position: absolute;
+      // font-size: ;
+      font-weight: 600;
+      padding: 0rem .5rem ;
+      border-radius: 10px;
+      top: -8px;
+      right: -8px;
+   }
+   svg:hover{
+      fill: $primary;
+   }
+   
+}
+
+.mainList{
+   font-family: 'vazirM';
+   display: flex;
+   list-style: none;
+   justify-content: space-evenly;
+   padding-block:1rem 1.6rem ;
+   li{
+      .Link{
+         color: $secondary;
+         text-decoration: none;
+      }
+      .Link:hover{
+         color: $primary;
+      }
+   }
+}
+

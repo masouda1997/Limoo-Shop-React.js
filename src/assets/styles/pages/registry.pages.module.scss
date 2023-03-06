@@ -1,0 +1,204 @@
+@import '../public.scss';
+@import '../fonts/font.scss';
+
+
+.container{
+   direction: rtl;
+   height: 100vh;
+   background-color: $lightbg;
+   background-color: $secondary;
+   color: $primary;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   font-family: "vazirM";
+}
+
+
+.wrapper{
+   z-index: 10;
+   position: relative;
+   width: fit-content;
+   background-color: #111111b9;
+   backdrop-filter: blur(5px);
+   padding: 2rem;
+   border-radius: 20px;
+   flex-basis: 40%;
+   h1{
+      padding-bottom: 2rem;
+      font-size: x-large;
+   }
+   form{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 auto;
+      width: 90%;
+      a{
+         position: absolute;
+         bottom: 1rem;
+         left: 2rem;
+         text-decoration: none;
+         color: $primary;
+         &:hover{
+            font-weight: 500;
+         }
+      }
+      
+      div{
+         width: 100%;
+         button{
+            font-size: 24px;
+            border-radius: 20px;
+            border: 2px solid $primary;
+            background: $secondary;
+            color:$primary;
+            width: 10rem;
+            padding-block: .5rem;
+            margin-block: 1rem 2rem;
+            &:hover{
+               background-color: $primary;
+               color: $secondary;
+               font-weight: 700;
+            }
+         }
+      }
+   }
+}
+.label{
+   font-size: 15px;
+   // font-weight: 700;
+   line-height: 20px;
+}
+.input{
+   font-size:large;
+   width: 100%;
+   height: 2.8rem;
+   border-radius: 20px;
+   margin-block: .5rem;
+   background-color: $lightCart;
+   padding-inline: 1rem;
+   outline: none;
+   border: none;
+}
+
+.animations{
+   position: absolute;
+}
+.xlayer{
+   background-color: rgb(204, 255, 0);
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   filter: blur(1.5px);
+   animation: x-axis 10s  ease-in-out;
+   transform: translateX(-300px);
+   animation-iteration-count: infinite;
+   z-index: 3;
+}
+.xlayer2{
+   background-color: #a90949;
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+   filter: blur(1.8px);
+   animation: x-axis2 10s  ease-in-out;
+   transform: translateX(-300px);
+   animation-iteration-count: infinite;
+   z-index: 1;
+}
+.xlayer3{
+   background-color: $primary;
+   border-radius: 50%;
+   width: 120px;
+   height: 120px;
+   z-index: 2;
+   filter: blur(1.5px);
+   animation: x-axis3 10s  ease-in-out;
+   transform: translateX(-300px);
+   animation-iteration-count: infinite;
+}
+
+.ylayer{
+   animation: y-axis 20s infinite ease-in-out;
+   transform: translateY(-50px);
+}
+.ylayer2{
+   animation: y-axis2 20s infinite ease-in-out;
+   transform: translateY(-100px);
+}
+.ylayer3{
+   animation: y-axis3 20s infinite ease-in-out;
+   transform: translateY(-50px);
+}
+
+.zlayer{
+   animation: z-rotate 10s infinite ease-in-out
+}
+.zlayer2{
+   animation: z-rotate2 10s infinite ease-in-out
+}
+.zlayer3{
+   animation: z-rotate3 10s infinite ease-in-out
+}
+
+
+
+@keyframes x-axis {
+   50%{
+      transform: translateX(0);
+   }
+}
+
+@keyframes x-axis2 {
+   50%{
+      transform: translateX(20px);
+   }
+}
+
+@keyframes x-axis3 {
+   50%{
+      transform: translateX(100px);
+   }
+}
+
+@keyframes y-axis {
+   50%{
+      transform: translateY(50px);
+   }
+}
+
+@keyframes z-rotate{
+   50%{
+      transform: rotateZ(90deg);
+   }
+}
+@keyframes z-rotate2{
+   50%{
+      transform: rotateZ(360deg);
+   }
+}
+@keyframes z-rotate3{
+   50%{
+      transform: rotateZ(180deg);
+   }
+}
+
+// .xxx{
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    width: 30px;
+//    height: 30px;
+//    background-color: pink;
+//    z-index: 100;
+//    offset-path: path('05.82898 C 21.984488,45.175857 83.514917,-5.3001588 142.19627,4.2941008 c 78.46504,-0.32631 154.65758,42.8282502 233.37698,20.1128842 96.433,-10.733578 189.47234,74.586242 188.8912,171.313065 10.61202,63.52223 46.1364,129.75072 19.29149,193.85175 -23.29129,32.55341 -70.96387,39.67538 -88.48014,78.26182 -20.2411,38.43543 8.44598,92.62436 -37.29786,119.35926 C 418.16247,618.6665 377.57538,574.85134 336.07015,572.32208 247.40736,559.15219 149.43985,593.07739 68.614105,541.55649 12.483107,509.69566 3.6888119,433.47625 32.326052,380.0841 64.592935,326.99251 78.039531,253.50113 38.578336,200.36856 13.212567,178.36422 -15.473637,127.46478 26.228359,105.82898 Z') ;
+//    animation: followPath 10s linear infinite;
+// }
+
+// @keyframes followPath{
+//    to{
+//       offset-distance: 100%;
+//    }
+// }

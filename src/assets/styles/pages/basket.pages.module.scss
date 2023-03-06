@@ -1,0 +1,194 @@
+@import '../public.scss';
+
+
+.container{
+   // background-color: teal;
+   width: 90%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   gap: 1.5rem;
+}
+.cartsWrapper{
+   flex-basis: 55%;
+   width: 60%;
+}
+.cart{
+   margin-bottom: 1rem;
+   border-radius: 20px;
+   background-color: white;
+   display: flex;
+   overflow: hidden;
+   // box-shadow:0px 0px 10px 1px #1ab54133;
+   &:hover{
+      transition: all ease 250ms;
+      border:1px solid $primary;
+      .ProductImage{
+         // transition: all ease 250ms;
+         // background-color: $primary;
+      }
+   }
+
+   .ProductImage{
+      width: 200px;
+      height: 200px;
+      background-color: #e1e1e1;
+      // background-color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // &:hover{
+      //    transition: all ease 250ms;
+      //    transform: scale(1.05);
+      // }
+      img{
+         width: 99%;
+         height: 99%;
+         border-radius: 0 20px 20px 0;
+
+      }
+   } 
+   .description{
+      width: 75%;
+      border: 1px solid #e1e1e1;
+      .title{
+         font-size: 20px;
+         font-weight: 700;
+         padding: 1rem;
+      }
+      .cartDetail{
+         display: grid;
+         grid-template-columns: repeat(2 , 1fr);
+         grid-template-row: repeat(2 , 1fr);
+         justify-items: flex-start;
+         gap: 1rem;
+         .productDes{
+            max-height: 120px;
+            grid-row: 1/3;
+            // background-color: #ff8000;
+            padding: 0 .5rem;
+            ul{
+               color: $secondary;
+               li::before {
+                  content: ".";
+                  color: $primary;
+                  display: inline-block; 
+                  width: 1rem;
+               }
+            }
+         }
+         .edition{
+            justify-self: flex-end;
+            padding-left: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            .productColor{
+               width: 30px;
+               height: 30px;
+               border-radius: 50px;
+               background-color: #ff8000;
+            }
+         }
+         .cartPrice{
+            justify-self: flex-end;
+            padding-left: 1rem;
+            h2{
+               display: inline;
+            }
+         }
+      
+      }
+   }
+}
+
+
+.priceSection{
+   position: sticky;
+   top:20px;
+   flex: 1;
+   max-height: 600px;
+   background-color: white;
+   border-radius: 20px;
+   padding-block: 2rem;
+   .productsPrice , .promo , .totalPrice{
+      color: $secondary;
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem;
+      padding-bottom: 1rem;
+      font-size: 30px;
+      span:last-child > span{
+         // font-size: smaller;
+      }
+   }
+   .promo{
+      border-bottom: 2px dashed $secondary;
+      padding-bottom: 2rem;
+      color: $primary;
+   }
+   .btnWrapper{
+      // background-color: tan;
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+
+   }
+   .btns{
+      flex: 1;
+      margin-inline: 1rem;
+      text-align: center;
+      background-color: $secondary;
+      color: $primary;
+      text-decoration: none;
+      padding: 1rem;
+      border-radius: 20px;
+      border: none;
+      font-size: 20px;
+   }
+   .btns:hover{
+      transition: all 250ms ease-in-out;
+      background-color: $primary;
+      color: $secondary;
+   }
+   .clearBasketBtn{
+      display: flex;
+      margin-top: 1rem;
+      // background-color: #ff8000;
+      padding: 1rem;
+      button{
+         flex: 1;
+         font-size: 20px;
+         padding: 1rem;
+         border-radius: 20px;
+         border:1px solid $primary;
+         color: $primary;
+         background-color: white;
+         // border: 1px solid $secondary;
+         &:hover{
+            transition: all 250ms ease-in-out;
+            background-color: $primary;
+            color: $secondary
+         }
+      }
+   }
+}
+
+.emptyBasket{
+   // background-color: orange;
+   line-height: 2rem;
+   height: 40.5vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+
+}
+.linktoHome{
+   color: $secondary;
+   text-decoration: none;
+   color: $primary;
+   font-size: 20px;
+}

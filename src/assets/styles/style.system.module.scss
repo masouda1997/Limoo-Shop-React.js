@@ -1,0 +1,29 @@
+// .container{
+//    width: 90%;
+//    margin: 0 auto;
+//    display: flex;
+//    flex-direction: column;
+//    // border-radius: 20px;
+// }
+
+// $sides:(padding-block , padding-inline);
+
+// @for $i from 1 through 10{
+//    @each $side in $sides{
+
+//    }
+// }
+// /////////////////////////////////
+// $sides: (top,bottom,left,right);
+
+// @for $i from 1 through 999 {
+//    @each $side in $sides {
+//       .m#{str-slice($side, 0, 1)}-#{$i} {
+//          margin-#{$side}: #{$i}px !important;
+//       }
+
+//       .p#{str-slice($side, 0, 1)}-#{$i} {
+//          padding-#{$side}: #{$i}px !important;
+//       }
+//    }
+// }

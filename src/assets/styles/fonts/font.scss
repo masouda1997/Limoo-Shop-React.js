@@ -1,0 +1,27 @@
+
+// @font-face {
+//    font-family: 'logo';
+//    src: url("dastnevis.eot")format("eot");
+//    src: url("dastnevis.ttf")format("ttf");
+//    src: url("dastnevis.woff")format("woff");
+// }
+@font-face {
+   font-family: "A Dast Nevis";
+   src: url("dastnevis.eot") format("eot"), url("dastnevis.woff") format("woff"), url("dastnevis.ttf") format(".ttf"), url("dastnevis.svg#ADastNevis") format("svg");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'vazirB';
+   src: url("Vazir-Bold.eot")format("eot");
+   src: url("Vazir-Bold.ttf")format("ttf");
+   src: url("Vazir-Bold.woff")format("woff");
+   src: url("Vazir-Bold.woff2")format("woff2");
+}
+@font-face {
+   font-family: 'vazirM';
+   src: url("Vazir-Medium.eot")format("eot");
+   src: url("Vazir-Medium.ttf")format("ttf");
+   src: url("Vazir-Medium.woff")format("woff");
+   src: url("Vazir-Medium.woff2")format("woff2");
+}

@@ -1,0 +1,37 @@
+@import '../public.scss';
+// @import'../components/specialProduct.component.scss';
+
+.banner{
+   background-color: #fff;
+   width: fit-content;
+   overflow: hidden;
+   border-radius: 20px;
+   max-block-size: 60vh;
+
+}
+
+.container{
+   width: 90%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   // border-radius: 20px;
+}
+
+// .products{
+//    display: flex;//important
+//    justify-content: center;//important
+//    gap:10px;
+// } 
+.landingBanner{
+   background-color: white;
+   margin-block: 4.5rem;
+   padding-block: 1rem;
+   div{
+      flex: 1;
+      height: 294px;
+      background: $lightCart;
+      border-radius: 20px;
+   }
+}

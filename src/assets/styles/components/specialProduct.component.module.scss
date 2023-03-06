@@ -1,0 +1,41 @@
+@import '../public.scss';
+
+.specialProduct{
+   width: 90%;
+   margin: 0 auto;
+   background-color: #fff;
+   padding: 1rem;
+   border-radius: 20px;
+   font-size:30px ;
+   color: $lightText;
+   align-self: flex-start;
+   // justify-self: flex-start;
+}
+.header{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   padding-bottom: 1rem;
+   div:first-child{
+      width: 1rem;
+      height: 1rem;
+      background: $primary; 
+      border-radius: 50px;
+   }
+   div:nth-child(1){
+      color: #727272;
+      // flex: 1;
+   }
+   div:last-child{
+      flex: 2;
+      height: 3px;
+      background: $primary; 
+      border-radius: 50px;
+   }
+}
+.mainContent{
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}

@@ -1,0 +1,62 @@
+
+@import'../public.scss';
+
+
+.container{
+   text-align: center;
+   background-color: white !important;
+   height: 100vh;
+   background: url('../../images/payPortal.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   h1{
+      // position: fixed;
+      top: 1rem;
+      left:50% ;
+      margin-bottom: 5rem;
+   }
+   .imageWrapper{
+      margin: 0 auto;
+      // background-color: red;
+      width: 100%;
+      // height: 400px;
+      img{
+         width: inherit;
+         height: inherit;
+      }
+   }
+   .btnWrapper{
+      button:nth-child(1){
+         position: absolute;
+         bottom: 4.5rem;
+         right: 21rem;
+         width: 9rem;
+         border-radius: 20px;
+         background-color: #428BCA;
+         border: transparent;
+         font-weight: bold;
+         margin-inline: 1rem;
+         &:hover{
+            transition: all 250ms ease;
+            color: white;
+            
+         }
+      }
+      button:nth-child(2){
+         position: absolute;
+         bottom: 4.5rem;
+         right: 31rem;
+         width: 9rem;
+         border-radius: 20px;
+         background-color: #d9534f;
+         border: transparent;
+         font-weight: bold;
+         margin-inline: 1rem;
+         &:hover{
+            transition: all 250ms ease;
+            color: white;
+            
+         }
+      }
+   }
+}

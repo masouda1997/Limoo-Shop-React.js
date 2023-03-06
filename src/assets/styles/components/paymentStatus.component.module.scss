@@ -1,0 +1,140 @@
+@import '../public.scss';
+
+.fail ,.success{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: white;
+   border-radius: 20px;
+   padding: 1rem 2rem ;
+   width: 60%;
+   margin: 0 auto;
+   h3 ,p{
+      padding: 1.5rem;
+      text-align: center;
+   }
+}
+
+.fail h1{
+   color: red;
+   text-align: right; 
+}
+
+.success h1{
+   color: $primary;
+   text-align: right;
+}
+
+
+.homeLink {
+   text-decoration: none;
+   align-self: end;
+   background-color: $secondary;
+   padding: .5rem;
+   width: fit-content;
+   height: 40px;
+   position: relative;
+   color: inherit;
+   div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-right: 20px;
+      svg{
+         fill: $primary;
+      }
+   }
+
+   &:hover{
+      svg{
+         fill: $secondary;
+      }
+      background-color: $primary;
+      &:before{
+         content: '';
+         border-right: 20px solid $primary;
+      }
+   }
+}
+
+.homeLink:before {
+   content: "";
+   position: absolute;
+   left: -20px;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-right: 20px solid $secondary;
+   border-bottom: 20px solid transparent;
+}
+
+.homeLink:after {
+   content: "";
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-right: 20px solid white;
+   border-bottom: 20px solid transparent;
+}
+
+
+.homeLinkFail {
+   text-decoration: none;
+   align-self: end;
+   background-color: $secondary;
+   padding: .5rem;
+   width: fit-content;
+   height: 40px;
+   position: relative;
+   color: inherit;
+   div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-right: 20px;
+      svg{
+         fill: red;
+      }
+   }
+
+   &:hover{
+      svg{
+         fill: $secondary;
+      }
+      background-color: red;
+      &:before{
+         content: '';
+         border-right: 20px solid red;
+      }
+   }
+}
+
+.homeLinkFail:before {
+   content: "";
+   position: absolute;
+   left: -20px;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-right: 20px solid $secondary;
+   border-bottom: 20px solid transparent;
+}
+
+.homeLinkFail:after {
+   content: "";
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 0;
+   height: 0;
+   border-top: 20px solid transparent;
+   border-right: 20px solid white;
+   border-bottom: 20px solid transparent;
+}
