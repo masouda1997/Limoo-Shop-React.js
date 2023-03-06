@@ -7,15 +7,15 @@ const FilterPrice = (props) => {
 		props.setFilterInfo(e.target.value)
 		console.log(e.target.value);
 	}
-   const [price , setPrice] = useState(100000)
-   const handleInput = (e) => {
-		setPrice(e.target.value);
-   };
-   const hotels = [
-		{ name: "A", price: 40 },
-		{ name: "B", price: 50 },
-		{ name: "C", price: 60 },
-   ];
+   // const [price , setPrice] = useState(100000)
+   // const handleInput = (e) => {
+	// 	setPrice(e.target.value);
+   // };
+   // const hotels = [
+	// 	{ name: "A", price: 40 },
+	// 	{ name: "B", price: 50 },
+	// 	{ name: "C", price: 60 },
+   // ];
    return (
 		<>
 		<section className={st.filterSection}>
@@ -53,17 +53,17 @@ const FilterPrice = (props) => {
 					/>
 					<label htmlFor=""> کالا های موجود</label>
 				</div>
-				{/* <div>
+				<div>
 					<input
 						type="radio"
 						name="filter"
-						value="popular"
-						checked={props.filterInfo==="popular"}
+						value='noFilter'
+						checked={props.filterInfo==="noFilter"}
 						onChange={changeHandler}
 						id=""
 					/>
-					<label htmlFor="">پرفروش ترین</label>
-				</div> */}
+					<label htmlFor=""> بدون فیلتر</label>
+				</div>
 			</div>
 			<div className={st.line} />
 		</section>

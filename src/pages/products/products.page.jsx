@@ -116,6 +116,10 @@ const Products = () => {
    }else if(filterInfo==="available"){
       console.log("available");
       filterers=[]
+   }else if(filterInfo==="noFilter"){
+      console.log(currentPosts);
+      filterers=currentPosts
+      console.log(filterers , "nooooooooooooo filter");
    }
    
    return (

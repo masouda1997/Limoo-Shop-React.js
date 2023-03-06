@@ -6,13 +6,16 @@ import { useSelector } from "react-redux"
 import { useCategoryDataQuery, useProductAddMutation } from "apis"
 import { useState , useEffect } from "react"
 import {Loading, ToastCart} from 'components'
+import { usePostImgMutation } from "apis/imageUpload"
+import {toast} from "react-toastify"
 
 
 
 
 export const AddGoods = ({status , setStatus})=>{
-   const {data:cat , isLoading} = useCategoryDataQuery()
+   const {data:cat , isLoading:ld} = useCategoryDataQuery()
    const [addNewData, response] = useProductAddMutation()
+	const [imageUpload ,isLoading] = usePostImgMutation()
    const [name,setName] = useState("")
    const [brand,setBrand] = useState("")
    const [desc,setDesc] = useState("")
@@ -20,6 +23,9 @@ export const AddGoods = ({status , setStatus})=>{
    const [thumbnail,setThumbnail] = useState("")
    const [price,setPrice] = useState("")
    const [category,setCategory] = useState("")
+	const [image, setImage] = useState("")
+
+	useEffect(()=>{},[image])
 
    const addAllData = {
       name, 
@@ -29,7 +35,7 @@ export const AddGoods = ({status , setStatus})=>{
       quantity,
       category ,
       thumbnail ,
-      image:"image should be added" 
+      image 
    }
    console.log(addAllData)
 
@@ -43,16 +49,23 @@ export const AddGoods = ({status , setStatus})=>{
          addAllData.price===''|| 
          addAllData.quantity===''|| 
          isNaN(addAllData.category)|| 
-         addAllData.thumbnail===''){
+         addAllData.thumbnail===''|| 
+			addAllData.image===''){
          console.warn("some field are empty");
-         alert("بعضی از فیلد ها خالی میباشد\n لطفا تمام فیلد ها را پر کنید")
+			console.log(addAllData);
+			toast.warn(
+				"لطفا تمام فیلد ها  را پر کنید ",
+				{
+					position: "top-center",
+					theme: "colored",
+				}
+			)
       }else{
          addNewData(addAllData)
          handleClose();
          console.log('done' )
       }
    }
-
 
    const handleClose =()=>{
       setStatus(st.inactive)
@@ -63,17 +76,19 @@ export const AddGoods = ({status , setStatus})=>{
       setThumbnail("")
       setPrice("")
       setCategory("")
+		setImage("")
    }
 
-   const handleUploadImg = (e)=>{
-      console.log("test function");
-      // console.log(e.target.files[0]);
-      const formData = new FormData();
-      const x = e.target.files
-      formData.append("image" , x[0])
-      // setImg(e.target.files[0])
-      // console.log(img,"img");
-      console.log(formData);
+   const handleUploadImg = async (e)=>{
+		const selectedFile = e.target.files
+		console.log(selectedFile[0]);
+		const formData = new FormData()
+		formData.append("image",selectedFile[0])
+		const res = await imageUpload(formData)
+		console.log(res);
+		setImage(`http://localhost:3002/files/${res.data.filename}`)
+		console.log(image);
+
    }
 
    const handleChooseCat = (event)=>{
@@ -81,7 +96,7 @@ export const AddGoods = ({status , setStatus})=>{
       const idOfCat = +event.target.value
       setCategory(idOfCat)
    }
-   if(isLoading){
+   if(ld){
       return <Loading/>
    }
 
@@ -103,7 +118,7 @@ export const AddGoods = ({status , setStatus})=>{
 								type="file"
 								className={st.fileInput}
 								accept="image/*"
-								onChange={(e) => handleUploadImg(e)}
+								onChange={handleUploadImg}
 							/>
 							<div>
 								<img src={imgIc} alt="" />

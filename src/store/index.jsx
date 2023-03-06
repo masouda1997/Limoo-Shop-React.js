@@ -86,7 +86,7 @@ const cartSlice = createSlice({
 				toast.info(
 					`تعداد ${state.cartItem[itemIndex].name} افزایش یافت`,
 					{
-						position: "bottom-right",
+						position: "top-right",
 						theme: "colored",
 					}
 				);
