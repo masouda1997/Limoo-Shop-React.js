@@ -3,7 +3,7 @@
     {
       "name": "G502 fury",
       "brand": "Logitech",
-      "price": "2000000",
+      "price": 2000002,
       "quantity": 13,
       "id": 2,
       "category": 1,
@@ -27,7 +27,7 @@
     {
       "name": "V7-fx",
       "brand": "a4tech",
-      "price": "3500000",
+      "price": 3500000,
       "quantity": 45,
       "id": 4,
       "category": 1,
@@ -39,7 +39,7 @@
       "name": "tm763",
       "brand": "tsco",
       "thumbnail": "lkjdslkjfyy",
-      "price": "1110000",
+      "price": 1110000,
       "quantity": "8",
       "id": 8,
       "category": 1,
