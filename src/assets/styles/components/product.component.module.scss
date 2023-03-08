@@ -40,6 +40,11 @@
    flex-direction: column;
    gap: 2.7rem;
    padding: .5rem;
+   span{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   }
    div:nth-of-type(1){
       display: flex;
       justify-content: space-between;
@@ -65,4 +70,5 @@
 .price span{
    font-size: 25px;
    color: $secondary;
+   
 }

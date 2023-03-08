@@ -92,10 +92,11 @@ export const AddGoods = ({status , setStatus})=>{
    }
 
    const handleChooseCat = (event)=>{
-      console.log("inside cat func");
-      const idOfCat = +event.target.value
+		const idOfCat = +event.target.value
+      console.log("inside cat func",idOfCat);
       setCategory(idOfCat)
    }
+	
    if(ld){
       return <Loading/>
    }

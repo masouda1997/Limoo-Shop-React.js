@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { INTERNAL_PATHS } from 'configs/routes.config'
 import { singleProductAction } from 'store'
+import { convertNumberToPersian } from 'utils'
 
 
 const Products = () => {
@@ -51,39 +52,39 @@ const Products = () => {
    switch (category.productName) {
 		case 'mouse':
 			filteredData = fetchedData.filter((val)=>val.category === 1)
-         console.log(filteredData)
+         // console.log(filteredData)
 			break;
 		case  "pc":
 			filteredData = fetchedData.filter((val)=>val.category === 2)
-			console.log(filteredData);
+			// console.log(filteredData);
 			break;
-		case  "headphone":
-			filteredData = fetchedData.filter((val)=>val.category === 3)
-			console.log(filteredData);
-			break;
-		case  "graphic-cart":
-			filteredData = fetchedData.filter((val)=>val.category === 4)
-			console.log(filteredData);
-			break;
+      case  "graphic-cart":
+         filteredData = fetchedData.filter((val)=>val.category === 3)
+         // console.log(filteredData);
+         break;
 		case  "monitor":
-			filteredData = fetchedData.filter((val)=>val.category === 5)
-			console.log(filteredData);
+			filteredData = fetchedData.filter((val)=>val.category === 4)
+			// console.log(filteredData);
 			break;
-		case  "keyboard":
-			filteredData = fetchedData.filter((val)=>val.category === 6)
-			console.log(filteredData);
-			break;
+      case  "keyboard":
+         filteredData = fetchedData.filter((val)=>val.category === 5)
+         // console.log(filteredData);
+         break;
 		case  "accessories":
-			filteredData = fetchedData.filter((val)=>val.category === 7)
-			console.log(filteredData);
+			filteredData = fetchedData.filter((val)=>val.category === 6)
+			// console.log(filteredData);
 			break;
 		case  "mobile":
-			filteredData = fetchedData.filter((val)=>val.category === 8)
-			console.log(filteredData);
+			filteredData = fetchedData.filter((val)=>val.category === 7)
+			// console.log(filteredData);
 			break;
 		case  "handsfree":
+			filteredData = fetchedData.filter((val)=>val.category === 8)
+			// console.log(filteredData);
+			break;
+		case  "headphone":
 			filteredData = fetchedData.filter((val)=>val.category === 9)
-			console.log(filteredData);
+			// console.log(filteredData);
 			break;
       default: console.log("nothing matched");
    }
@@ -92,7 +93,7 @@ const Products = () => {
    const indexOfFirstPost = indexOfLastPost - postsPerPage
    const currentPosts = filteredData.slice(indexOfFirstPost,indexOfLastPost)
    const paginate = (pageNumber)=>{setCurrentPage(pageNumber)} 
-   console.log(currentPosts);
+   // console.log(currentPosts);
 
    let filterers
 
@@ -199,7 +200,7 @@ const Products = () => {
                                     </svg>
                                  </button>
                                  <span>
-                                    {price || 0}
+                                    {convertNumberToPersian(price) || 0}
                                     <small> تومان</small>
                                  </span>
                               </div>

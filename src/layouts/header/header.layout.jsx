@@ -1,25 +1,41 @@
 import st from 'assets/styles/layouts/header.layout.module.scss'
 import Logo from 'components/logo/Logo.component'
 import SearchBox from 'components/searchbox/SearchBox.component'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { INTERNAL_PATHS } from 'configs/routes.config'
 import { menuTitleAction } from 'store'
 import { useSelector , useDispatch } from 'react-redux'
-import {useSearchDataQuery} from 'apis'
-import { useState } from 'react'
+import {useCategoryDataQuery, useSearchDataQuery} from 'apis'
+import { useEffect, useState } from 'react'
+import { Loading } from 'components'
+import { API_BASE_URL } from 'configs/variable.config'
 
 
 export const Header= () => {
+   // const [cat,setCat]=useState([])
+   const {data:categoryList , isLoading}= useCategoryDataQuery()
+   // setCat(categoryList)
+
    const dispatch = useDispatch();
-   const {cartTotalQuantity} = useSelector(state => state.CartSlice)
+   const navigate = useNavigate()
+   const {cartTotalQuantity } = useSelector(state => state.CartSlice)
    // const menuData = useSelector((state)=>state.MenuTitle.menuTitle)
    // console.log(menuData,"🔴")
    const{data:searchData} = useSearchDataQuery()
-
-   const handlePassTitle=(e)=>{
+   
+   
+   const handlePassTitle=(e,cat)=>{
       console.log(e.target.innerText)
+      console.log(cat);
+      navigate(cat)
       dispatch(menuTitleAction.showTitle({title:e.target.innerText}))
    }
+   
+   if(isLoading){
+      <Loading/>
+   }
+
+   console.log(categoryList);
    return (
       <header className={st.header}>
          <div className={st.specialOccasion}>
@@ -49,8 +65,17 @@ export const Header= () => {
                </div>              
             </div>
 
-            <ul className={st.mainList}>
-               <li>
+            <ul className={st.mainList}>  
+               {categoryList?.map((catItem)=>(
+                  <li>
+                     <div 
+                        className={st.Link}
+                        onClick={(e)=> handlePassTitle(e,`/products/${catItem.name}`)}>
+                        {catItem.persianName}
+                     </div>
+                  </li>
+               ))}
+               {/* <li>
                   <Link to={`/products/mouse`} 
                   className={st.Link}
                   onClick={handlePassTitle} >موس</Link> 
@@ -118,7 +143,7 @@ export const Header= () => {
                   onClick={handlePassTitle}>
                      هندزفری
                   </Link> 
-               </li>
+               </li> */}
             </ul>
          </div>
       </header>
