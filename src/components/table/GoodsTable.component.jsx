@@ -16,7 +16,7 @@ const GoodsTable = (props) => {
    const [deleteRow] = useProductDeleteMutation()
    
    const {data:goodsFetchedData,isLoading, isFetching} = useProductDataQuery(page)
-   console.log(goodsFetchedData);
+   // console.log(goodsFetchedData);
    
    useEffect(()=>{
       // setCatStatus(categories)
@@ -29,7 +29,7 @@ const GoodsTable = (props) => {
 
    const handleEdit = (item)=>{
       props.setStatus(st.active)
-      console.log(item)
+      console.log("enter edit modal" ,item)
       dispatch(goodsAction.goodsToModal(item))
    }
 

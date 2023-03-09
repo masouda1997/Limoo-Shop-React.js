@@ -3,8 +3,8 @@
     {
       "name": "G502 fury",
       "brand": "Logitech",
-      "price": "1150000",
-      "quantity": 13,
+      "price": "1100000",
+      "quantity": "14",
       "id": 2,
       "category": 1,
       "description": "gaming mouse for pro_player\ndpi=15000",
@@ -16,7 +16,7 @@
       "name": "basilisk v3",
       "brand": "razer",
       "price": 3275000,
-      "quantity": 8,
+      "quantity": "10",
       "id": 3,
       "category": 1,
       "description": "gaming mouse for pro_player\ndpi=20000\nspecial scroller",
@@ -28,7 +28,7 @@
       "name": "V7-fx",
       "brand": "a4tech",
       "price": 3500000,
-      "quantity": 45,
+      "quantity": "14",
       "id": 4,
       "category": 1,
       "description": "gaming mouse for pro_player",
@@ -40,23 +40,23 @@
       "brand": "tsco",
       "thumbnail": "lkjdslkjfyy",
       "price": 1110000,
-      "quantity": "8",
+      "quantity": 8,
       "id": 8,
       "category": 1,
       "description": "simple mouse",
       "color": 3,
-      "image": "inage-link"
+      "image": "http://localhost:3002/files/4e97d980090a5e6acb972628f8085fb8"
     },
     {
       "name": "ساعت هوشمند اپل واچ سری7 ",
       "brand": "apple",
       "price": 3275000,
-      "quantity": "16",
+      "quantity": 10,
       "id": 9,
       "category": 6,
       "description": "Aluminum Case 45mm",
       "color": 3,
-      "image": ""
+      "image": "http://localhost:3002/files/cf4723a6a66a24d038351677de9a1581"
     },
     {
       "name": "m130-light",
@@ -67,7 +67,7 @@
       "category": 1,
       "description": "sth",
       "color": 3,
-      "image": "inage-link"
+      "image": "http://localhost:3002/files/2457b9cb3a59ef667217f7922b250bdb"
     },
     {
       "name": "RTX3090",
@@ -75,10 +75,10 @@
       "price": 121000000,
       "quantity": 15,
       "id": 11,
-      "category": 4,
+      "category": 3,
       "description": "Memory Interface: 384-bit.Avoid using unofficial software\nVideo Memory: 24GB GDDR6X\nTriple Fan Thermal Design",
       "color": 3,
-      "image": ""
+      "image": "http://localhost:3002/files/7329600b125ff39f092f88ac4b1aa340"
     },
     {
       "name": "لپ تاپ 15.6 TUF Dash F15 FX516PE-AB73 ",
@@ -89,17 +89,17 @@
       "category": 2,
       "thumbnail": "Asus i7 ۱۱۳۷۰H-8GB-512GB SSD-4GB GeForce RTX ۳۰۵۰TI GDDR۶-IPS ۱۵.۶ inch Full HD",
       "id": 12,
-      "image": "image should be added"
+      "image": "http://localhost:3002/files/e6775e971bf050172f97c20c2b7c3e0e"
     },
     {
       "name": "کیبورد origin edition",
       "brand": "razer",
       "description": "وزن: 500g\nدارای کلید مکانیکال",
       "price": "12000000",
-      "quantity": 15,
-      "category": 4,
+      "quantity": 16,
+      "category": 5,
       "thumbnail": "مخصوص گیم",
-      "image": "http://localhost:3002/files/5a0ef97034ca26d3ff94f951e3a14775",
+      "image": "http://localhost:3002/files/f4330519a39bb31247f5e75e9259738e",
       "id": 13
     }
   ],

@@ -19,6 +19,7 @@ const InventoryTable = ({setUpdatedQuantity , setUpdatedPrice}) => {
    }
    const handleQuantityClick = (id)=>{
       console.log("entered handleQuantityClick");
+		console.log(selectQuantity);
       setSelectQuantity(id)
    }
 

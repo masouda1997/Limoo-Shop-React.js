@@ -32,7 +32,7 @@ const EditGoods = ({status , setStatus}) => {
       console.log(selectedFile[0])
       imageUpload(formData)
          .then(res =>{
-            console.log(res.data.filename);
+            console.log(inputValue);
             setInputValue((prev)=>({...prev,image:`http://localhost:3002/files/${res.data.filename}`}))
             console.log(inputValue);})
          // .then(s)

@@ -1,4 +1,5 @@
 import st from  'assets/styles/layouts/header.layout.module.scss'
+import { INTERNAL_PATHS } from 'configs/routes.config';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -62,13 +63,13 @@ const SearchBox = ({data}) => {
 			</div>
 			{filteredData.length != 0 && (
 				<div className={st.apiData}>
-					{filteredData.slice(0 , 5).map((value)=>{
-						return <div>
-							<a href='#'>
+					{filteredData.slice(0 , 5).map((value)=>(
+						<div>
+							<Link to={`/products/mouse`}>
 								<p>{value.name}</p>
-							</a>
+							</Link>
 						</div>
-					})}
+					))}
 				</div>
 			)}
 		</div>

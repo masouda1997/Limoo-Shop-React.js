@@ -39,7 +39,7 @@
 .btn{
    text-align: center;
    text-decoration: none;
-   background-color: $lightbg;
+   background-color: #e3e3e3;
    border: 2px solid transparent;
    color:$primary;
    font-size: 25px;
@@ -366,4 +366,40 @@ textarea,.input,.formData{
    background-color: $primary;
    left: 2.9em;
    /* left: 3.9em; */
+}
+
+
+// ///////////////////////
+.builder{
+   text-align: center;
+   margin-top: 10rem;
+   font-size: 50px;
+}
+.h2Builder{
+   text-align: center;
+   animation: blinker 500ms linear infinite ;
+   animation-direction: alternate;
+   @keyframes blinker {
+      0%{
+         // opacity: 0;
+         color: red;
+      }
+      70%{
+         color: red;
+      }
+      100%{
+         color: $secondary;
+      }
+      
+   }
+
+}
+
+.logoTxt{
+   font-family: "A Dast Nevis", 'vazirM';
+   // font-family: "vazirM";
+   font-size: 35px;
+   color: $primary;
+   text-shadow: 0 0 3px #242424;
+   
 }

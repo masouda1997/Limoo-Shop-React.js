@@ -37,7 +37,7 @@ export const AddGoods = ({status , setStatus})=>{
       thumbnail ,
       image 
    }
-   console.log(addAllData)
+   // console.log(addAllData)
 
    const handleAdd = ()=>{
       // console.log("enterd but not added yet");
