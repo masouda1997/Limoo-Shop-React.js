@@ -60,9 +60,9 @@ const EditOrders = ({ setEditStatus,editStatus,dataMover,setDataMover}) => {
                <label htmlFor="" className={s1.modalText}> {convertNumberToPersian(+dataMover.phone)}</label>
             </div>
             <div className={s1.infoLine2}>
-               <label htmlFor="" className={s1.modaltitle}>زمان تحویل  </label>
+               <label htmlFor="" className={s1.modaltitle}>زمان ثبت سفارش  </label>
                <label htmlFor="" className={s1.modalText}>{toPersianDate(Date.now())}</label>
-               <label htmlFor="" className={s1.modaltitle}>زمان سفارش</label>
+               <label htmlFor="" className={s1.modaltitle}>زمان تحویل سفارش</label>
                <label htmlFor="" className={s1.modalText}> {toPersianDate(dataMover.expectAt)} </label>
             </div>
             <div className={s1.infoLine3}>
