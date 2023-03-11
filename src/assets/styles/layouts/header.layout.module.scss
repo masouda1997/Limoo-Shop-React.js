@@ -6,6 +6,11 @@
    direction: rtl;
    display: flex;
    flex-direction: column;
+   background-color: #ebeaea;
+   // background: rgb(12,218,57);
+   // background: linear-gradient(0deg, rgba(12,218,57,1) 0%, rgba(206,248,215,1) 17%, rgba(255,255,255,1) 30%);
+//    background: rgb(12,218,57);
+// background: linear-gradient(0deg, rgba(12,218,57,1) 0%, rgba(26,121,47,1) 0%, rgba(38,38,38,1) 100%);
 }
 .specialOccasion{
    background-color: $primary;

@@ -10,7 +10,7 @@ const Logo = () => {
       <div className={st.logoWrapper}>
          <NavLink to={INTERNAL_PATHS.HOME}>
             <div className={st.logo}>
-               <img src={logo2} alt=" " />
+               <img src={logo} alt=" " />
             </div>
          </NavLink>
          <NavLink style={{textDecoration:"none"}}>

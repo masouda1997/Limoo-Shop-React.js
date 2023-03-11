@@ -13,8 +13,8 @@
       div:first-child{
          background: #D9D9D9;
          border-radius: 50%;
-         width: 150px;
-         height: 150px;
+         width: 180px;
+         height: 180px;
          filter: drop-shadow(0px 4px 4px #00000040);
          &:hover{
             transition: all ease 300ms;
@@ -25,8 +25,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
          }
       }
       div:nth-child(2){
